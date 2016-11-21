@@ -23,7 +23,7 @@ def stable_softmax(x):
 
         Also, at least one term would be 1 in the denominator. So, there won't be any issue of dividing by zero.
 
-        Still, underflow can occur in the numerator. And the solution is to use: log(fast_softmax(x))
+        Still, underflow can occur in the numerator. And the solution is to use: log(stable_softmax(x))
     """
 
     z = x - np.max(x)
